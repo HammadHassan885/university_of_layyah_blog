@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>University of Layyah Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">University of Layyah <span>Blog</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#posts">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>News and stories from the University of Layyah</h1>
+      <p>Admissions, events, sports and student life from the campus beside the Indus.</p>
+      <a class="btn" href="#posts">Read latest posts</a>
+    </section>
+
+    <section class="wrap" id="posts">
+      <h2>Latest posts</h2>
+      <div class="controls">
+        <input type="search" id="search" placeholder="Search posts" aria-label="Search posts">
+        <div class="filters" id="filters">
+          <button class="chip active" data-cat="all">All</button>
+          <button class="chip" data-cat="admissions">Admissions</button>
+          <button class="chip" data-cat="events">Events</button>
+          <button class="chip" data-cat="sports">Sports</button>
+          <button class="chip" data-cat="academics">Academics</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-cat="admissions">
+          <div class="tag admissions">Admissions</div>
+          <h3>Fall admissions are open</h3>
+          <p>Applications are open for BS programs. Submit your form and documents before the deadline on the admissions office notice board or website.</p>
+          <small>12 October 2026</small>
+        </article>
+        <article class="card" data-cat="events">
+          <div class="tag events">Events</div>
+          <h3>Annual Science Fair</h3>
+          <p>Students from every department will present projects in robotics, agriculture and software. Visitors are welcome in the main hall.</p>
+          <small>5 October 2026</small>
+        </article>
+        <article class="card" data-cat="sports">
+          <div class="tag sports">Sports</div>
+          <h3>Cricket team wins inter-university match</h3>
+          <p>The university team won a close final and now moves on to the regional round next month.</p>
+          <small>28 September 2026</small>
+        </article>
+        <article class="card" data-cat="academics">
+          <div class="tag academics">Academics</div>
+          <h3>New computer lab inaugurated</h3>
+          <p>The Computer Science department now has a new lab with 40 workstations for web development and programming classes.</p>
+          <small>20 September 2026</small>
+        </article>
+        <article class="card" data-cat="events">
+          <div class="tag events">Events</div>
+          <h3>Tree plantation drive on campus</h3>
+          <p>Faculty and students planted over 200 saplings, including date palms, to make the campus greener.</p>
+          <small>10 September 2026</small>
+        </article>
+        <article class="card" data-cat="academics">
+          <div class="tag academics">Academics</div>
+          <h3>Midterm exam schedule released</h3>
+          <p>The date sheet for all departments is now available. Check your department notice board for room numbers and timings.</p>
+          <small>1 September 2026</small>
+        </article>
+      </div>
+      <p class="empty" id="empty" hidden>No posts match your search. Try a different word or category.</p>
+    </section>
+
+    <section class="band" id="about">
+      <div class="wrap narrow">
+        <h2>About</h2>
+        <p>This blog is a student project for the Web Technologies course. It shares news and updates from the University of Layyah, located in Layyah, Punjab, Pakistan.</p>
+      </div>
+    </section>
+
+    <section class="wrap narrow" id="contact">
+      <h2>Contact</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="4" required></textarea>
+        <button class="btn" type="submit">Send message</button>
+        <p id="formMsg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 University of Layyah Blog.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
